@@ -14,5 +14,6 @@ protocol Coordinator {
     
     var navigationController: UINavigationController { get set }
     
+    /// Called when the Coordinator is ready to take control over the App
     func start ()
 }

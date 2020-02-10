@@ -22,7 +22,7 @@ extension StoryBoarded where Self: UIViewController {
         let classIdentifier = String(describing: self)
         // loads the storyboard
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        // instantiate the class and force downcast it as Self
+        // instantiate the class and force downcast it as Self, because the ViewController identifier always has to match the StoryBoard identifier
         return storyBoard.instantiateViewController(identifier: classIdentifier) as! Self
     }
 }

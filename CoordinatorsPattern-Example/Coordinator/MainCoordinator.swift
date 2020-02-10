@@ -9,6 +9,7 @@
 import UIKit
 
 
+/// Concrete implementation of the Coordinator protocol
 class MainCoordinator: Coordinator {
     
     var childCoordinators: [Coordinator] = []
@@ -24,6 +25,22 @@ class MainCoordinator: Coordinator {
         let firstVC = ViewController.instantiate()
         firstVC.coordinator = self
         navigationController.pushViewController(firstVC, animated: true)
+    }
+    
+    func instantiateChatVC() {
+        
+        let chatVC = ChatViewController.instantiate()
+        chatVC.coordinator = self
+        navigationController.pushViewController(chatVC, animated: true)
+        
+    }
+    
+    func instantiateUserAccountVC() {
+        
+        let userAccount = UserAccountViewController.instantiate()
+        userAccount.coordinator = self
+        navigationController.pushViewController(userAccount, animated: true)
+        
     }
     
     
