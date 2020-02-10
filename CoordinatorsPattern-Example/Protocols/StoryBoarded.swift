@@ -18,10 +18,11 @@ extension StoryBoarded where Self: UIViewController {
     
     /// Instantiate the class that adopts this protocol
     static func instantiate() -> Self {
-        
+        // gets the name of the class
         let classIdentifier = String(describing: self)
+        // loads the storyboard
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        
+        // instantiate the class and force downcast it as Self
         return storyBoard.instantiateViewController(identifier: classIdentifier) as! Self
     }
 }
