@@ -20,7 +20,10 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        // do something 
+        
+        let firstVC = ViewController.instantiate()
+        firstVC.coordinator = self
+        navigationController.pushViewController(firstVC, animated: true)
     }
     
     
