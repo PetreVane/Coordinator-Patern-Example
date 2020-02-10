@@ -16,6 +16,8 @@
 		0B2E892523F1C74B00F81815 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E892423F1C74B00F81815 /* Coordinator.swift */; };
 		0B2E892723F1C7BC00F81815 /* StoryBoarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E892623F1C7BC00F81815 /* StoryBoarded.swift */; };
 		0B2E892923F1C9FE00F81815 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E892823F1C9FE00F81815 /* MainCoordinator.swift */; };
+		0B47582023F1D3B900A0648D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B47581F23F1D3B900A0648D /* ChatViewController.swift */; };
+		0B47582223F1D3D200A0648D /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B47582123F1D3D200A0648D /* UserAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		0B2E892423F1C74B00F81815 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		0B2E892623F1C7BC00F81815 /* StoryBoarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBoarded.swift; sourceTree = "<group>"; };
 		0B2E892823F1C9FE00F81815 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		0B47581F23F1D3B900A0648D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		0B47582123F1D3D200A0648D /* UserAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				0B2E890F23F1C43500F81815 /* ViewController.swift */,
+				0B47581F23F1D3B900A0648D /* ChatViewController.swift */,
+				0B47582123F1D3D200A0648D /* UserAccountViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -190,7 +196,9 @@
 				0B2E892723F1C7BC00F81815 /* StoryBoarded.swift in Sources */,
 				0B2E892923F1C9FE00F81815 /* MainCoordinator.swift in Sources */,
 				0B2E892523F1C74B00F81815 /* Coordinator.swift in Sources */,
+				0B47582023F1D3B900A0648D /* ChatViewController.swift in Sources */,
 				0B2E891023F1C43500F81815 /* ViewController.swift in Sources */,
+				0B47582223F1D3D200A0648D /* UserAccountViewController.swift in Sources */,
 				0B2E890C23F1C43500F81815 /* AppDelegate.swift in Sources */,
 				0B2E890E23F1C43500F81815 /* SceneDelegate.swift in Sources */,
 			);
