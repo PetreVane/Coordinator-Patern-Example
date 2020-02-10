@@ -15,8 +15,16 @@ class ViewController: UIViewController, StoryBoarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
     }
 
-
+    @IBAction func goToChatPressed(_ sender: UIButton) {
+        coordinator?.instantiateChatVC()
+    }
+    
+    @IBAction func goToAccountPressed(_ sender: UIButton) {
+        coordinator?.instantiateUserAccountVC()
+    }
+    
 }
 
