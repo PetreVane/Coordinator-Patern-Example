@@ -18,6 +18,8 @@
 		0B2E892923F1C9FE00F81815 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E892823F1C9FE00F81815 /* MainCoordinator.swift */; };
 		0B47582023F1D3B900A0648D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B47581F23F1D3B900A0648D /* ChatViewController.swift */; };
 		0B47582223F1D3D200A0648D /* UserAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B47582123F1D3D200A0648D /* UserAccountViewController.swift */; };
+		0BDD053223F2A4B700C5496F /* ChatCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD053123F2A4B700C5496F /* ChatCoordinator.swift */; };
+		0BDD053523F2B53100C5496F /* Commented.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD053423F2B53100C5496F /* Commented.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		0B2E892823F1C9FE00F81815 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		0B47581F23F1D3B900A0648D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		0B47582123F1D3D200A0648D /* UserAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewController.swift; sourceTree = "<group>"; };
+		0BDD053123F2A4B700C5496F /* ChatCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCoordinator.swift; sourceTree = "<group>"; };
+		0BDD053423F2B53100C5496F /* Commented.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commented.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				0B2E890A23F1C43500F81815 /* CoordinatorsPattern-Example */,
+				0BDD053323F2B50600C5496F /* Helpers */,
 				0B2E890923F1C43500F81815 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,8 +123,17 @@
 			isa = PBXGroup;
 			children = (
 				0B2E892823F1C9FE00F81815 /* MainCoordinator.swift */,
+				0BDD053123F2A4B700C5496F /* ChatCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		0BDD053323F2B50600C5496F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0BDD053423F2B53100C5496F /* Commented.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +213,10 @@
 				0B47582023F1D3B900A0648D /* ChatViewController.swift in Sources */,
 				0B2E891023F1C43500F81815 /* ViewController.swift in Sources */,
 				0B47582223F1D3D200A0648D /* UserAccountViewController.swift in Sources */,
+				0BDD053523F2B53100C5496F /* Commented.swift in Sources */,
 				0B2E890C23F1C43500F81815 /* AppDelegate.swift in Sources */,
 				0B2E890E23F1C43500F81815 /* SceneDelegate.swift in Sources */,
+				0BDD053223F2A4B700C5496F /* ChatCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

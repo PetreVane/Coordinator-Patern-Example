@@ -13,7 +13,6 @@ import UIKit
 class MainCoordinator: Coordinator {
     
     var childCoordinators: [Coordinator] = []
-    
     var navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {
@@ -28,11 +27,10 @@ class MainCoordinator: Coordinator {
     }
     
     func instantiateChatVC() {
-        
-        let chatVC = ChatViewController.instantiate()
-        chatVC.coordinator = self
-        navigationController.pushViewController(chatVC, animated: true)
-        
+        let child = ChatCoordinator(navigationController: navigationController)
+        childCoordinators.append(child)
+        child.parentCoordinator = self
+        child.start()
     }
     
     func instantiateUserAccountVC() {
@@ -43,5 +41,5 @@ class MainCoordinator: Coordinator {
         
     }
     
-    
+
 }
