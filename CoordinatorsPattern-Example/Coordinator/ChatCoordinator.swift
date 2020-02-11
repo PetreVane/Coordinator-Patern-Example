@@ -24,9 +24,5 @@ class ChatCoordinator: Coordinator {
         chatVC.coordinator = self
         navigationController.pushViewController(chatVC, animated: true)
     }
-    
-    func didFinishChatting() {
-        parentCoordinator?.removeChild(self)
-    }
-    
+        
 }

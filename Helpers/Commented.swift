@@ -32,3 +32,8 @@ import Foundation
 //
 //    coordinator?.didFinishChatting()
 //}
+
+
+//func didFinishChatting() {
+//    parentCoordinator?.removeChild(self)
+//}
