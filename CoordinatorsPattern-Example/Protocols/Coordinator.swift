@@ -8,12 +8,13 @@
 
 import UIKit
 
-protocol Coordinator {
+protocol Coordinator: AnyObject {
     
     var childCoordinators: [Coordinator] {get set}
-    
     var navigationController: UINavigationController { get set }
     
     /// Called when the Coordinator is ready to take control over the App
     func start ()
 }
+
+

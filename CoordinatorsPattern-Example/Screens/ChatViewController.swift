@@ -10,7 +10,7 @@ import UIKit
 
 class ChatViewController: UIViewController, StoryBoarded {
 
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: ChatCoordinator?
     let label = UILabel()
     
     override func viewDidLoad() {
@@ -37,6 +37,5 @@ class ChatViewController: UIViewController, StoryBoarded {
             label.heightAnchor.constraint(equalToConstant: padding)
         ])
     }
-
-
+        
 }
