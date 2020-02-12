@@ -10,7 +10,7 @@ import UIKit
 
 
 /// Concrete implementation of the Coordinator protocol
-class MainCoordinator: Coordinator {
+class MainCoordinator: NSObject, Coordinator {
     
     var childCoordinators: [Coordinator] = []
     var navigationController: UINavigationController
@@ -20,25 +20,72 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
+        // sets the MainCoordinator as delegate for UINavigationController
+        navigationController.delegate = self
         
+        // Instantiate ViewController
         let firstVC = ViewController.instantiate()
+        
+        // sets the MainCoordinator as parentCoordinator
         firstVC.coordinator = self
+        
+        // Pushes ViewController onto the stack
         navigationController.pushViewController(firstVC, animated: true)
     }
     
     func instantiateChatVC() {
         let child = ChatCoordinator(navigationController: navigationController)
-        childCoordinators.append(child)
         child.parentCoordinator = self
+        childCoordinators.append(child)
+        
         child.start()
     }
     
     func instantiateUserAccountVC() {
-        
         let userAccount = UserAccountViewController.instantiate()
         userAccount.coordinator = self
         navigationController.pushViewController(userAccount, animated: true)
         
     }
     
+    /// Removes a child coordinator
+    /// - Parameter child: child coordinator conforming to MainCoordinator
+    ///
+    /// Iterates over the list of childCoordinators and removes the one which points to the same reference as the argument passed to this method
+    func removeChild(_ child: Coordinator?) {
+        
+        // iterates over each element in chilrCoordinators array
+        for (index, coordinator) in childCoordinators.enumerated() {
+            
+            // verifies if both objects point to the same reference
+            if coordinator === child {
+             
+                // remove child from array
+                childCoordinators.remove(at: index)
+                print("Child Coordinator removed from index \(index)")
+                break
+            }
+        }
+    }
+}
+
+extension MainCoordinator: UINavigationControllerDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        
+        // Gets the transition coordinator object associated with a currently active transition or nil if no transition is in progress.
+        guard let originViewController = navigationController.transitionCoordinator?.viewController(forKey: .from) else { return }
+        
+        // checks if the navigationController's list of ViewControllers already contains the originVierController; if it does, return
+        if navigationController.viewControllers.contains(originViewController) {
+            return
+        }
+        
+        // if return has not been called, it means we're popping the viewController;
+        // then, check to see if the originVC is chatVC, and if it is, then call the remove method
+        if let chatViewController = originViewController as? ChatViewController {
+            removeChild(chatViewController.childCoordinator)
+        }
+        
+    }
 }
