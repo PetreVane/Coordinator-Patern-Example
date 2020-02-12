@@ -10,19 +10,6 @@ import Foundation
 
 
 
-    /// Removes a child coordinator
-    /// - Parameter child: child coordinator conforming to MainCoordinator
-    ///
-    /// Iterates over the list of childCoordinators and removes the one which points to the same reference as the argument passed to this method
-    func removeChild(_ child: Coordinator?) {
-
-//        for (index, coordinator) in childCoordinators.enumerated() {
-//            if coordinator === child {
-//                childCoordinators.remove(at: index)
-//                print("Child Coordinator removed from index \(index)")
-//            }
-//        }
-    }
 
 
 /// Called when the view is dismissed

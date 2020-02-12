@@ -10,7 +10,7 @@ import UIKit
 
 class ChatViewController: UIViewController, StoryBoarded {
 
-    weak var coordinator: ChatCoordinator?
+    weak var childCoordinator: ChatCoordinator?
     let label = UILabel()
     
     override func viewDidLoad() {
