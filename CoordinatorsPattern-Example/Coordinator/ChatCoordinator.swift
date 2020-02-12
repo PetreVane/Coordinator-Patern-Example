@@ -21,7 +21,7 @@ class ChatCoordinator: Coordinator {
     func start() {
         
         let chatVC = ChatViewController.instantiate()
-        chatVC.coordinator = self
+        chatVC.childCoordinator = self
         navigationController.pushViewController(chatVC, animated: true)
     }
         
