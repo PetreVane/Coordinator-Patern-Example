@@ -11,11 +11,12 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    var coordinator: MainCoordinator?
+//    var coordinator: MainCoordinator?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
  
+        /*
         // creates the main navigation controller to be used for our app
         let navigationController = UINavigationController()
         
@@ -25,13 +26,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // calls the start method, and by doing so, asking the coordinator to take over control
         coordinator?.start()
         
+        */
+        
         // give the scene a name
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         // creates a basic window
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = navigationController
+        window?.rootViewController = MainTabBar()
         window?.makeKeyAndVisible()
         
     }
