@@ -28,10 +28,12 @@ class MainCoordinator: NSObject, Coordinator {
         
         // sets the MainCoordinator as parentCoordinator
         firstVC.coordinator = self
+        firstVC.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 0)
         
         // Pushes ViewController onto the stack
         navigationController.pushViewController(firstVC, animated: true)
     }
+        
     
     func instantiateChatVC() {
         let chatCoordinator = ChatCoordinator(navigationController: navigationController)
@@ -48,6 +50,14 @@ class MainCoordinator: NSObject, Coordinator {
         userAccountCoordinator.parentCoordinator = self
         childCoordinators.append(userAccountCoordinator)
         userAccountCoordinator.start()
+    }
+    
+    func instantiateLaunchVC() {
+        let launchCoordinator = LaunchCoordinator(navigationController: navigationController)
+        launchCoordinator.parentCoordinator = self
+        childCoordinators.append(launchCoordinator)
+        launchCoordinator.start()
+        
     }
     
     /// Removes a child coordinator
