@@ -10,7 +10,7 @@ import UIKit
 
 class UserAccountViewController: UIViewController, StoryBoarded {
 
-    weak var coordinator: MainCoordinator?
+    weak var childCoordinator: UserAccountCoordinator?
     let label = UILabel()
     
     override func viewDidLoad() {

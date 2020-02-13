@@ -34,25 +34,27 @@ class MainCoordinator: NSObject, Coordinator {
     }
     
     func instantiateChatVC() {
-        let child = ChatCoordinator(navigationController: navigationController)
-        child.parentCoordinator = self
-        childCoordinators.append(child)
+        let chatCoordinator = ChatCoordinator(navigationController: navigationController)
+        chatCoordinator.parentCoordinator = self
+        childCoordinators.append(chatCoordinator)
+        print("Child coordinator contains: \(childCoordinators)")
         
-        child.start()
+        chatCoordinator.start()
     }
     
     func instantiateUserAccountVC() {
-        let userAccount = UserAccountViewController.instantiate()
-        userAccount.coordinator = self
-        navigationController.pushViewController(userAccount, animated: true)
         
+        let userAccountCoordinator = UserAccountCoordinator(navigationController: navigationController)
+        userAccountCoordinator.parentCoordinator = self
+        childCoordinators.append(userAccountCoordinator)
+        userAccountCoordinator.start()
     }
     
     /// Removes a child coordinator
     /// - Parameter child: child coordinator conforming to MainCoordinator
     ///
     /// Iterates over the list of childCoordinators and removes the one which points to the same reference as the argument passed to this method
-    func removeChild(_ child: Coordinator?) {
+    func removeChildCoordinator(_ child: Coordinator?) {
         
         // iterates over each element in chilrCoordinators array
         for (index, coordinator) in childCoordinators.enumerated() {
@@ -84,7 +86,14 @@ extension MainCoordinator: UINavigationControllerDelegate {
         // if return has not been called, it means we're popping the viewController;
         // then, check to see if the originVC is chatVC, and if it is, then call the remove method
         if let chatViewController = originViewController as? ChatViewController {
-            removeChild(chatViewController.childCoordinator)
+            removeChildCoordinator(chatViewController.childCoordinator)
+            print("Removed ChatVC: childCoordinators contains: \(childCoordinators)")
+        }
+        
+        if let userAccountVC = originViewController as? UserAccountViewController {
+            removeChildCoordinator(userAccountVC.childCoordinator)
+            print("Removed userAccount VC")
+            
         }
         
     }

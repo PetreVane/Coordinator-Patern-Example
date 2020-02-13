@@ -36,6 +36,7 @@ class ChatViewController: UIViewController, StoryBoarded {
             label.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
             label.heightAnchor.constraint(equalToConstant: padding)
         ])
+        
     }
         
 }

@@ -1,14 +1,15 @@
 //
-//  ChatCoordinator.swift
+//  UserAccountCoordinator.swift
 //  CoordinatorsPattern-Example
 //
-//  Created by Petre Vane on 11/02/2020.
+//  Created by Petre Vane on 12/02/2020.
 //  Copyright © 2020 Petre Vane. All rights reserved.
 //
 
 import UIKit
 
-class ChatCoordinator: Coordinator {
+
+class UserAccountCoordinator: Coordinator {
     
     weak var parentCoordinator: MainCoordinator?
     var childCoordinators = [Coordinator]()
@@ -19,9 +20,9 @@ class ChatCoordinator: Coordinator {
     }
     
     func start() {
-        let chatVC = ChatViewController.instantiate()
-        chatVC.childCoordinator = self
-        navigationController.pushViewController(chatVC, animated: true)
+        let userAccount = UserAccountViewController.instantiate()
+        userAccount.childCoordinator = self
+        navigationController.pushViewController(userAccount, animated: true)
     }
-        
+    
 }

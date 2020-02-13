@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B04D09E23F42FE70055A6E8 /* UserAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B04D09D23F42FE70055A6E8 /* UserAccountCoordinator.swift */; };
 		0B2E890C23F1C43500F81815 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E890B23F1C43500F81815 /* AppDelegate.swift */; };
 		0B2E890E23F1C43500F81815 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E890D23F1C43500F81815 /* SceneDelegate.swift */; };
 		0B2E891023F1C43500F81815 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2E890F23F1C43500F81815 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B04D09D23F42FE70055A6E8 /* UserAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountCoordinator.swift; sourceTree = "<group>"; };
 		0B2E890823F1C43500F81815 /* CoordinatorsPattern-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoordinatorsPattern-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B2E890B23F1C43500F81815 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B2E890D23F1C43500F81815 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				0B2E892823F1C9FE00F81815 /* MainCoordinator.swift */,
 				0BDD053123F2A4B700C5496F /* ChatCoordinator.swift */,
+				0B04D09D23F42FE70055A6E8 /* UserAccountCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				0BDD053523F2B53100C5496F /* Commented.swift in Sources */,
 				0B2E890C23F1C43500F81815 /* AppDelegate.swift in Sources */,
 				0B2E890E23F1C43500F81815 /* SceneDelegate.swift in Sources */,
+				0B04D09E23F42FE70055A6E8 /* UserAccountCoordinator.swift in Sources */,
 				0BDD053223F2A4B700C5496F /* ChatCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
